@@ -1,4 +1,5 @@
 import tkinter as tk
+import datetime
 
 def send_message():
 
@@ -10,6 +11,9 @@ def send_message():
 
         if message.lower() == "hello":
             reply = "Hi!"
+        elif message.lower() == "time":
+            current_time = datetime.datetime.now().strftime("%I:%M %p")
+            reply = "Current Time: " + current_time    
         elif message.lower() == "how are you":
             reply = "I am Fine."
         elif message.lower() == "what is your name":
